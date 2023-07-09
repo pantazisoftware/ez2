@@ -14,17 +14,18 @@
     @stack('before-styles')
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <livewire:styles />
     @stack('after-styles')
 </head>
 
-<body class="text-body antialiased">
+<body class="antialiased text-body">
 
 
     <div id="app" class="relative h-screen">
         @include('frontend.includes.nav')
         <div id="contact"
-            class="hidden absolute -rotate-90 -left-60 py-2 bottom-96 z-1 lg:flex flex-row items-center ">
+            class="absolute flex-row items-center hidden py-2 -rotate-90 -left-60 bottom-96 z-1 lg:flex ">
             <div id="social" class="mx-10">
                 <div class="flex flex-row space-x-3">
                     <a href="#">
@@ -95,7 +96,7 @@
             @yield('content')
         </main>
         <div id="footer" class="py-10">
-            <p class="text-center uppercase font-bold"><span class="text-accent">&copy; 2023</span> EZ Suite</p>
+            <p class="font-bold text-center uppercase"><span class="text-accent">&copy; 2023</span> EZ Suite</p>
         </div>
     </div>
     <!--app-->
@@ -105,6 +106,11 @@
     <script src="{{ mix('js/manifest.js') }}"></script>
     <script src="{{ mix('js/vendor.js') }}"></script>
     <script src="{{ mix('js/frontend.js') }}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     @stack('after-scripts')
 </body>
 
