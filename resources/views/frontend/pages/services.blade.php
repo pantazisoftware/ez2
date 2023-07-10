@@ -3,7 +3,7 @@
 @section('title', __('Services with Tabs'))
 
 @section('content')
-    <div class="px-2 w-full md:px-0  md:w-5/6 lg:w-4/6 mx-auto text-body">
+    <div class="w-full px-2 mx-auto md:px-0 md:w-5/6 lg:w-4/6 text-body">
         <div id="thumbnail" class="my-10">
             <img class="mx-auto object-cover h-[570px] w-full object-left"
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
@@ -12,7 +12,7 @@
 
         <div id="content" x-data="{ activeTab: 0 }">
 
-            <div id="tab-menu" class="flex flex-row justify-center space-x-10 my-16">
+            <div id="tab-menu" class="flex flex-row justify-center my-16 space-x-10">
                 <button x-on:click="activeTab = 0" x-bind:class="{ 'bg-accent text-white': activeTab === 0 }"
                     class="font-bold px-4 py-3 rounded-tl-[20px] rounded-br-[20px]">Consulting</button>
                 <button x-on:click="activeTab = 1" x-bind:class="{ 'bg-accent text-white': activeTab === 1 }"
@@ -24,7 +24,7 @@
             <div id="tab-content">
                 <div id="content-1" :class="{ 'active': activeTab === 0 }"
                     x-show.transition.in.opacity.duration.1000="activeTab === 0">
-                    <div class="w-full sm:w-5/6 md:w-4/6 mx-auto lg:w-full grid grid-cols-12 gap-10">
+                    <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
                         <div id="card" class="col-span-12 lg:col-span-4 group">
                             <a href="" class="relative">
                                 <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
@@ -36,16 +36,16 @@
                                     Strategy
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -62,16 +62,16 @@
                                     Technical Details
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -88,16 +88,16 @@
                                     Finance
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -108,7 +108,7 @@
                 </div>
                 <div id="content-2" :class="{ 'active': activeTab === 1 }"
                     x-show.transition.in.opacity.duration.1000="activeTab === 1">
-                    <div class="w-full sm:w-5/6 md:w-4/6 mx-auto lg:w-full grid grid-cols-12 gap-10">
+                    <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
                         <div id="card" class="col-span-12 lg:col-span-4 group">
                             <a href="" class="relative">
                                 <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
@@ -119,16 +119,16 @@
                                     Management
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -145,16 +145,16 @@
                                     Logic
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -171,16 +171,16 @@
                                     Advisory
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -191,7 +191,7 @@
                 </div>
                 <div id="content-3" :class="{ 'active': activeTab === 2 }"
                     x-show.transition.in.opacity.duration.1000="activeTab === 2">
-                    <div class="w-full sm:w-5/6 md:w-4/6 mx-auto lg:w-full grid grid-cols-12 gap-10">
+                    <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
                         <div id="card" class="col-span-12 lg:col-span-4 group">
                             <a href="" class="relative">
                                 <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
@@ -202,16 +202,16 @@
                                     Unity
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -228,16 +228,16 @@
                                     Learn
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -254,16 +254,16 @@
                                     Internet
                                 </h1>
                             </a>
-                            <p class="text-center py-5">The effort vastly improved the company’s planning and execution
+                            <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
                                 functions, they knew that in
                                 order to succeed in this era of technology their accounting systems needed.</p>
-                            <hr class="bg-gray-200 h-1 my-3">
+                            <hr class="h-1 my-3 bg-gray-200">
                             <a href=""
-                                class="w-full uppercase inline-flex space-x-2 items-center justify-center text-sm font-bold"><span>See
+                                class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                     more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 group-hover:text-accent transition duration-200 ease-linear group-hover:translate-x-2">
+                                    class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
