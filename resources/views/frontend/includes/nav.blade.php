@@ -1,4 +1,4 @@
-<div x-data="{ mobile: false }">
+<div x-data="{ menu: false }">
     <nav class="flex relative z-99 flex-row justify-between items-center py-9 bg-white px-[15px] lg:px-14"
         x-on:mouseover.away="open = false" x-data="{ open: false }">
         <div>
@@ -6,20 +6,20 @@
                 <img src="https://consulting.stylemixthemes.com/manchester/wp-content/uploads/sites/50/2021/08/logo_dark.svg"
                     alt=""></a>
         </div>
-        <div class="hidden lg:flex flex-row gap-x-5 relative">
+        <div class="relative flex-row hidden lg:flex gap-x-5">
             <a href="#"
-                class="uppercase font-bold text-sm text-primary hover:text-accent trasition duration-75 ease-linear"
+                class="text-sm font-bold uppercase duration-75 ease-linear text-primary hover:text-accent trasition"
                 x-on:mouseover="open = true" x-on:click="open = !open">Services</a>
             <a href="#"
-                class="uppercase font-bold text-sm text-primary hover:text-accent trasition duration-75 ease-linear">Cases</a>
+                class="text-sm font-bold uppercase duration-75 ease-linear text-primary hover:text-accent trasition">Cases</a>
             <a href="#"
-                class="uppercase font-bold text-sm text-primary hover:text-accent trasition duration-75 ease-linear">Portofolio</a>
+                class="text-sm font-bold uppercase duration-75 ease-linear text-primary hover:text-accent trasition">Portofolio</a>
             <a href="#"
-                class="uppercase font-bold text-sm text-primary hover:text-accent trasition duration-75 ease-linear">Contact</a>
+                class="text-sm font-bold uppercase duration-75 ease-linear text-primary hover:text-accent trasition">Contact</a>
 
 
         </div>
-        <div class="lg:flex flex-row hidden space-x-10">
+        <div class="flex-row hidden space-x-10 lg:flex">
             <div class="flex flex-row items-center space-x-3">
                 <div>
                     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@
                 </div>
                 <div>
                     <p class="font-bold leading-5">consulting</p>
-                    <p class="text-gray-500 uppercase text-xs">• online</p>
+                    <p class="text-xs text-gray-500 uppercase">• online</p>
                 </div>
             </div>
             <div class="flex flex-row items-center space-x-3">
@@ -45,13 +45,13 @@
                 </div>
                 <div>
                     <p class="font-bold leading-5">212 386 5575</p>
-                    <p class="text-gray-500 uppercase text-xs">CALL OR MESSAGE</p>
+                    <p class="text-xs text-gray-500 uppercase">CALL OR MESSAGE</p>
                 </div>
             </div>
         </div>
         <div id="mobile-btn" class="lg:hidden">
-            <button class="text-gray-500" x-on:click="mobile =!mobile">
-                <svg fill="none" stroke="currentColor" class="text-gray-500 w-8 h-8" stroke-width="1.5"
+            <button class="text-gray-500" x-on:click="menu = !menu">
+                <svg fill="none" stroke="currentColor" class="w-8 h-8 text-gray-500" stroke-width="1.5"
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
@@ -60,34 +60,34 @@
             </button>
         </div>
 
-        <div x-cloak x-show="open" class="absolute top-24 left-0 right-0 mx-16 z-20 bg-white drop-shadow-3xl">
+        <div x-cloak x-show="open" class="absolute left-0 right-0 z-20 mx-16 bg-white top-24 drop-shadow-3xl">
             <div class="flex flex-row justify-center">
-                <div id="menu" class="w-2/3 flex justify-center divide-x py-10 divide-gray-200">
-                    <div class="flex flex-col pb-10 px-10 w-full">
-                        <h2 class="font-bold text-primary pb-8">Cases</h2>
+                <div id="menu" class="flex justify-center w-2/3 py-10 divide-x divide-gray-200">
+                    <div class="flex flex-col w-full px-10 pb-10">
+                        <h2 class="pb-8 font-bold text-primary">Cases</h2>
                         <div class="flex flex-col space-y-4">
-                            <a href="#" class="text-primary hover:text-accent font-medium">Case 1</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Case 2</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Case 3</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Case 4</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Case 1</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Case 2</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Case 3</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Case 4</a>
                         </div>
                     </div>
-                    <div class="flex flex-col pb-10 px-10 w-full">
-                        <h2 class="font-bold text-primary pb-8">Services</h2>
+                    <div class="flex flex-col w-full px-10 pb-10">
+                        <h2 class="pb-8 font-bold text-primary">Services</h2>
                         <div class="flex flex-col space-y-4">
-                            <a href="#" class="text-primary hover:text-accent font-medium">Service 1</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Service 2</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Service 3</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Service 4</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Service 1</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Service 2</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Service 3</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Service 4</a>
                         </div>
                     </div>
-                    <div class="flex flex-col pb-10 px-10 w-full">
-                        <h2 class="font-bold text-primary pb-8">Teams</h2>
+                    <div class="flex flex-col w-full px-10 pb-10">
+                        <h2 class="pb-8 font-bold text-primary">Teams</h2>
                         <div class="flex flex-col space-y-4">
-                            <a href="#" class="text-primary hover:text-accent font-medium">Team 1</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Team 2</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Team 3</a>
-                            <a href="#" class="text-primary hover:text-accent font-medium">Team 4</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Team 1</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Team 2</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Team 3</a>
+                            <a href="#" class="font-medium text-primary hover:text-accent">Team 4</a>
                         </div>
                     </div>
                 </div>
@@ -100,8 +100,8 @@
             </div>
         </div>
     </nav>
-    <div x-cloak x-show="mobile" id="mobile-menu" class="w-full px-4 bg-primary">
-        <div class="flex flex-col space-y-8 px-6 py-8">
+    <div x-show.transition.in.opacity.duration.1000="menu" id="mobile-menu" class="w-full px-4 bg-primary">
+        <div class="flex flex-col px-6 py-8 space-y-8">
             <div>
                 <a class="font-bold py-3 uppercase text-white hover:text-[#fde428]" href="#">Services</a>
             </div>

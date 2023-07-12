@@ -290,8 +290,7 @@
                 </div>
 
                 <div id="tab-content">
-                    <div id="content-1" :class="{ 'active': activeTab === 0 }"
-                        x-show.transition.in.opacity.duration.1000="activeTab === 0">
+                    <div id="content-1" x-show.transition.in.opacity.duration.1000="activeTab === 0">
                         <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
                             <div id="card" class="col-span-12 lg:col-span-4 group">
                                 <a href="" class="relative">
@@ -374,8 +373,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="content-2" :class="{ 'active': activeTab === 1 }"
-                        x-show.transition.in.opacity.duration.1000="activeTab === 1">
+                    <div id="content-2" x-show.transition.in.opacity.duration.1000="activeTab === 1">
                         <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
                             <div id="card" class="col-span-12 lg:col-span-4 group">
                                 <a href="" class="relative">
@@ -457,8 +455,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="content-3" :class="{ 'active': activeTab === 2 }"
-                        x-show.transition.in.opacity.duration.1000="activeTab === 2">
+                    <div id="content-3" x-show.transition.in.opacity.duration.1000="activeTab === 2">
                         <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
                             <div id="card" class="col-span-12 lg:col-span-4 group">
                                 <a href="" class="relative">
@@ -1222,12 +1219,12 @@
 
         <div id="contact-form" class="rounded-bl-[50px] rounded-tr-[50px] overflow-hidden mb-32">
             <div class="grid grid-cols-12">
-                <div class="relative col-span-5">
+                <div class="relative col-span-12 lg:col-span-5">
                     <img class="absolute left-0 right-0 z-0 object-cover w-full h-full"
                         src="https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
                         alt="">
-                    <div class="relative top-0 left-0 right-0 z-10 object-cover h-full px-32 py-24 bg-primary/80">
-                        <h1 class="text-6xl font-bold text-white">
+                    <div class="relative top-0 left-0 right-0 z-10 object-cover h-full px-24 py-24 lg:px-32 bg-primary/80">
+                        <h1 class="text-4xl font-bold text-white lg:text-6xl">
                             Schedule a <span class="italic highlight">free business</span> consultation</h1>
                         <div class="flex flex-col my-16 space-y-8">
                             <div class="flex flex-row items-center space-x-4">
@@ -1281,8 +1278,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-7 bg-accent">
-                    <div class="w-full p-24">
+                <div class="col-span-12 lg:col-span-7 bg-accent">
+                    <div class="w-full p-10 lg:p-24">
                         <form action="" autocomplete="off">
                             <div class="grid grid-cols-2 gap-16">
                                 <div class="col-span-1">
