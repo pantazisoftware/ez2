@@ -1,6 +1,6 @@
-<div x-data="{ menu: false }">
+<div x-data="{ mobilesubmenu: false, mobilemenu: false, open: false }">
     <nav class="flex relative z-99 flex-row justify-between items-center py-9 bg-white px-[15px] lg:px-14"
-        x-on:mouseover.away="open = false" x-data="{ open: false }">
+        x-on:mouseover.away="open = false">
         <div>
             <a href="">
                 <img src="https://consulting.stylemixthemes.com/manchester/wp-content/uploads/sites/50/2021/08/logo_dark.svg"
@@ -50,7 +50,7 @@
             </div>
         </div>
         <div id="mobile-btn" class="lg:hidden">
-            <button class="text-gray-500" x-on:click="menu = !menu">
+            <button class="text-gray-500" x-on:click="mobilemenu = ! mobilemenu">
                 <svg fill="none" stroke="currentColor" class="w-8 h-8 text-gray-500" stroke-width="1.5"
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -99,21 +99,42 @@
                 </div>
             </div>
         </div>
+
+
     </nav>
-    <div x-show.transition.in.opacity.duration.1000="menu" id="mobile-menu" class="w-full px-4 bg-primary">
-        <div class="flex flex-col px-6 py-8 space-y-8">
+
+    <div x-cloak x-show="mobilemenu" id="mobile-menu" class="w-full bg-primary">
+        <div class="flex flex-col py-8 space-y-8">
             <div>
-                <a class="font-bold py-3 uppercase text-white hover:text-[#fde428]" href="#">Services</a>
+                <a class="font-bold px-6 py-3 uppercase text-white hover:text-[#fde428] flex justify-between items-center"
+                    href="#" x-on:click="mobilesubmenu = ! mobilesubmenu"><span>Services</span> <svg
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                </a>
+                <div id="submenu" class="flex flex-col py-4 mt-4 space-y-8 bg-white" x-show="mobilesubmenu"
+                    x-transition:enter.scale.80 x-transition:leave.scale.90>
+                    <a class="px-6 py-3 font-bold uppercase text-primary hover:text-accent" href="#">Sub Service
+                        1</a>
+                    <a class="px-6 py-3 font-bold uppercase text-primary hover:text-accent" href="#">Sub Service
+                        2</a>
+                    <a class="px-6 py-3 font-bold uppercase text-primary hover:text-accent" href="#">Sub Service
+                        3</a>
+                </div>
             </div>
             <div>
-                <a class="font-bold py-3 uppercase text-white hover:text-[#fde428]" href="#">Cases</a>
+                <a class="font-bold px-6 py-3 uppercase text-white hover:text-[#fde428] flex" href="#">Cases</a>
             </div>
             <div>
-                <a class="font-bold py-3 uppercase text-white hover:text-[#fde428]" href="#">Portofolio</a>
+                <a class="font-bold px-6 py-3 uppercase text-white hover:text-[#fde428] flex"
+                    href="#">Portofolio</a>
             </div>
             <div>
-                <a class="font-bold py-3 uppercase text-white hover:text-[#fde428]" href="#">Contact</a>
+                <a class="font-bold px-6 py-3 uppercase text-white hover:text-[#fde428] flex"
+                    href="#">Contact</a>
             </div>
         </div>
     </div>
+
 </div>
