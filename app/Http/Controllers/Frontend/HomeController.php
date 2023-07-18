@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Post;
+
 /**
  * Class HomeController.
  */
@@ -12,7 +14,8 @@ class HomeController
      */
     public function index()
     {
-        return view('frontend.index');
+        $posts = Post::orderBy('created_at', 'desc')->limit(2)->get();
+        return view('frontend.index', compact('posts'));
     }
 
     public function services()

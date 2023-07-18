@@ -7,14 +7,14 @@
                     alt=""></a>
         </div>
         <div class="relative flex-row hidden lg:flex gap-x-5">
-            <a href="#"
+            <a href="services"
                 class="text-sm font-bold uppercase duration-75 ease-linear text-primary hover:text-accent trasition"
                 x-on:mouseover="open = true" x-on:click="open = !open">Services</a>
             <a href="#"
                 class="text-sm font-bold uppercase duration-75 ease-linear text-primary hover:text-accent trasition">Cases</a>
             <a href="#"
                 class="text-sm font-bold uppercase duration-75 ease-linear text-primary hover:text-accent trasition">Portofolio</a>
-            <a href="#"
+            <a href="contact"
                 class="text-sm font-bold uppercase duration-75 ease-linear text-primary hover:text-accent trasition">Contact</a>
 
 
@@ -103,7 +103,7 @@
 
     </nav>
 
-    <div x-cloak x-show="mobilemenu" id="mobile-menu" class="w-full bg-primary">
+    <div x-cloak x-show.transition="mobilemenu" id="mobile-menu" class="w-full bg-primary">
         <div class="flex flex-col py-8 space-y-8">
             <div>
                 <a class="font-bold px-6 py-3 uppercase text-white hover:text-[#fde428] flex justify-between items-center"
@@ -115,7 +115,8 @@
                 </a>
                 <div id="submenu" class="flex flex-col py-4 mt-4 space-y-8 bg-white" x-show="mobilesubmenu"
                     x-transition:enter.scale.80 x-transition:leave.scale.90>
-                    <a class="px-6 py-3 font-bold uppercase text-primary hover:text-accent" href="#">Sub Service
+                    <a class="px-6 py-3 font-bold uppercase text-primary hover:text-accent" href="services">Sub
+                        Service
                         1</a>
                     <a class="px-6 py-3 font-bold uppercase text-primary hover:text-accent" href="#">Sub Service
                         2</a>
@@ -132,7 +133,7 @@
             </div>
             <div>
                 <a class="font-bold px-6 py-3 uppercase text-white hover:text-[#fde428] flex"
-                    href="#">Contact</a>
+                    href="contact">Contact</a>
             </div>
         </div>
     </div>

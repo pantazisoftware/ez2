@@ -4,310 +4,99 @@
 
 @section('content')
     <div class="p-2 lg:px-16">
-        <div id="jumbo" x-data="{ jumbo: 0 }">
+        <div id="jumbo" x-data="{ jumbo: 1 }">
             <div id="jumbotron"
-                class="w-full h-[500px] lg:h-[800px] relative rounded-bl-[50px] rounded-tr-[50px] overflow-hidden">
+                class="w-full min-h-[400px] lg:h-[800px] relative rounded-bl-[50px] rounded-tr-[50px] overflow-hidden">
 
-                <div id="jumbotron-content" id="0" x-show.transition.in.opacity.duration.1000="jumbo === 0">
-                    <img class="absolute top-0 bottom-0 object-cover h-full origin-center lg:object-cover"
-                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                        alt="">
-                    <div class="absolute z-0 opacity-0 -bottom-32 left-10 lg:opacity-100">
-                        <svg class="fill-current w-[400px] text-white" data-aos="fade-up" data-aos-delay="1000"
-                            data-aos-duration="600" data-aos-easing="ease-in-out" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
-                            viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve">
-                            <path
-                                d="M11,12c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578c0.8574219,1.0039062,1.9238281,2.2529297,4.0097656,2.2529297  c2.0849609,0,3.1523438-1.2490234,4.0097656-2.2524414C22.3535156,12.5610352,22.8867188,12,23.9970703,12  c1.1074219,0,1.6396484,0.5605469,2.4853516,1.5512695c0.8564453,1.0039062,1.9228516,2.253418,4.0078125,2.253418  s3.1513672-1.2495117,4.0087891-2.2529297C35.3447266,12.5605469,35.8779297,12,36.9863281,12  c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461c0.8574219,1.003418,1.9248047,2.2524414,4.0097656,2.2524414  c2.0859375,0,3.1533203-1.2495117,4.0107422-2.2529297C48.3417969,12.5605469,48.875,12,49.984375,12  c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461c0.8574219,1.003418,1.9248047,2.2524414,4.0097656,2.2524414  c2.0869141,0,3.1533203-1.2490234,4.0117188-2.2529297C61.3417969,12.5605469,61.8740234,12,62.984375,12  c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578c0.8574219,1.0039062,1.9238281,2.2529297,4.0097656,2.2529297  s3.1533203-1.2490234,4.0107422-2.2524414C74.3408203,12.5610352,74.8740234,12,75.9853516,12  c1.1123047,0,1.6464844,0.5610352,2.4941406,1.5522461c0.8574219,1.003418,1.9257812,2.2524414,4.0126953,2.2524414  c2.0878906,0,3.1552734-1.2490234,4.0136719-2.2524414C87.3535156,12.5610352,87.8876953,12,89,12c0.5527344,0,1-0.4477539,1-1  s-0.4472656-1-1-1c-2.0878906,0-3.1552734,1.2490234-4.0136719,2.2524414  c-0.8476562,0.9912109-1.3818359,1.5522461-2.4941406,1.5522461c-1.1113281,0-1.6455078-0.5610352-2.4931641-1.5522461  C79.1416016,11.2490234,78.0732422,10,75.9853516,10c-2.0869141,0-3.1542969,1.2490234-4.0126953,2.2529297  c-0.8466797,0.9912109-1.3798828,1.5517578-2.4902344,1.5517578c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  C66.1367188,11.2490234,65.0703125,10,62.984375,10s-3.1533203,1.2490234-4.0097656,2.2524414  c-0.8476562,0.9912109-1.3808594,1.5522461-2.4912109,1.5522461c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  C53.1376953,11.2495117,52.0703125,10,49.984375,10c-2.0849609,0-3.1523438,1.2490234-4.0097656,2.2524414  c-0.8457031,0.9912109-1.3789062,1.5522461-2.4892578,1.5522461c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  C40.1396484,11.2495117,39.0722656,10,36.9863281,10c-2.0849609,0-3.1513672,1.2495117-4.0087891,2.2529297  c-0.8457031,0.9912109-1.3789062,1.5517578-2.4873047,1.5517578s-1.640625-0.5605469-2.4863281-1.5517578  C27.1474609,11.2490234,26.0810547,10,23.9970703,10c-2.0859375,0-3.1533203,1.2495117-4.0107422,2.2529297  c-0.8457031,0.9912109-1.3789062,1.5517578-2.4882812,1.5517578s-1.6425781-0.5605469-2.4882812-1.5517578  C14.1523438,11.2490234,13.0859375,10,11,10c-0.5527344,0-1,0.4477539-1,1S10.4472656,12,11,12z" />
-                            <path
-                                d="M89,28.5488281c-2.0878906,0-3.1552734,1.2490234-4.0136719,2.2524414  c-0.8476562,0.9912109-1.3818359,1.5522461-2.4941406,1.5522461c-1.1113281,0-1.6455078-0.5610352-2.4931641-1.5522461  c-0.8574219-1.003418-1.9257812-2.2524414-4.0136719-2.2524414c-2.0869141,0-3.1542969,1.2490234-4.0126953,2.2529297  c-0.8466797,0.9912109-1.3798828,1.5517578-2.4902344,1.5517578c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.0039062-1.9238281-2.2529297-4.0097656-2.2529297s-3.1533203,1.2490234-4.0097656,2.2524414  c-0.8476562,0.9912109-1.3808594,1.5522461-2.4912109,1.5522461c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.003418-1.9248047-2.2529297-4.0107422-2.2529297c-2.0849609,0-3.1523438,1.2490234-4.0097656,2.2524414  c-0.8457031,0.9912109-1.3789062,1.5522461-2.4892578,1.5522461c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.003418-1.9248047-2.2529297-4.0107422-2.2529297c-2.0849609,0-3.1513672,1.2495117-4.0087891,2.2529297  c-0.8457031,0.9912109-1.3789062,1.5517578-2.4873047,1.5517578s-1.640625-0.5605469-2.4863281-1.5517578  c-0.8564453-1.0039062-1.9228516-2.2529297-4.0068359-2.2529297c-2.0859375,0-3.1533203,1.2495117-4.0107422,2.2529297  c-0.8457031,0.9912109-1.3789062,1.5517578-2.4882812,1.5517578s-1.6425781-0.5605469-2.4882812-1.5517578  C14.1523438,29.7978516,13.0859375,28.5488281,11,28.5488281c-0.5527344,0-1,0.4477539-1,1s0.4472656,1,1,1  c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578c0.8574219,1.0039062,1.9238281,2.2529297,4.0097656,2.2529297  c2.0849609,0,3.1523438-1.2490234,4.0097656-2.2524414c0.8457031-0.9912109,1.3789062-1.5522461,2.4892578-1.5522461  c1.1074219,0,1.6396484,0.5605469,2.4853516,1.5512695c0.8564453,1.0039062,1.9228516,2.253418,4.0078125,2.253418  s3.1513672-1.2495117,4.0087891-2.2529297c0.8457031-0.9912109,1.3789062-1.5517578,2.4873047-1.5517578  c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461c0.8574219,1.003418,1.9248047,2.2524414,4.0097656,2.2524414  c2.0859375,0,3.1533203-1.2495117,4.0107422-2.2529297c0.8457031-0.9912109,1.3789062-1.5517578,2.4882812-1.5517578  c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461c0.8574219,1.003418,1.9248047,2.2524414,4.0097656,2.2524414  c2.0869141,0,3.1533203-1.2490234,4.0117188-2.2529297c0.8466797-0.9912109,1.3789062-1.5517578,2.4892578-1.5517578  c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578c0.8574219,1.0039062,1.9238281,2.2529297,4.0097656,2.2529297  s3.1533203-1.2490234,4.0107422-2.2524414c0.8476562-0.9912109,1.3808594-1.5522461,2.4921875-1.5522461  c1.1123047,0,1.6464844,0.5610352,2.4941406,1.5522461c0.8574219,1.003418,1.9257812,2.2524414,4.0126953,2.2524414  c2.0878906,0,3.1552734-1.2490234,4.0136719-2.2524414C87.3535156,31.1098633,87.8876953,30.5488281,89,30.5488281  c0.5527344,0,1-0.4477539,1-1S89.5527344,28.5488281,89,28.5488281z" />
-                            <path
-                                d="M89,47.0976562c-2.0878906,0-3.1552734,1.2490234-4.0136719,2.2524414  c-0.8476562,0.9912109-1.3818359,1.5522461-2.4941406,1.5522461c-1.1113281,0-1.6455078-0.5610352-2.4931641-1.5522461  c-0.8574219-1.003418-1.9257812-2.2524414-4.0136719-2.2524414c-2.0869141,0-3.1542969,1.2490234-4.0126953,2.2529297  c-0.8466797,0.9912109-1.3798828,1.5517578-2.4902344,1.5517578c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.0039062-1.9238281-2.2529297-4.0097656-2.2529297s-3.1533203,1.2490234-4.0097656,2.2524414  c-0.8476562,0.9912109-1.3808594,1.5522461-2.4912109,1.5522461c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.003418-1.9248047-2.2529297-4.0107422-2.2529297c-2.0849609,0-3.1523438,1.2490234-4.0097656,2.2524414  c-0.8457031,0.9912109-1.3789062,1.5522461-2.4892578,1.5522461c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.003418-1.9248047-2.2529297-4.0107422-2.2529297c-2.0849609,0-3.1513672,1.2495117-4.0087891,2.2529297  c-0.8457031,0.9912109-1.3789062,1.5517578-2.4873047,1.5517578s-1.640625-0.5605469-2.4863281-1.5517578  c-0.8564453-1.0039062-1.9228516-2.2529297-4.0068359-2.2529297c-2.0859375,0-3.1533203,1.2495117-4.0107422,2.2529297  c-0.8457031,0.9912109-1.3789062,1.5517578-2.4882812,1.5517578s-1.6425781-0.5605469-2.4882812-1.5517578  C14.1523438,48.3466797,13.0859375,47.0976562,11,47.0976562c-0.5527344,0-1,0.4477539-1,1s0.4472656,1,1,1  c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578c0.8574219,1.0039062,1.9238281,2.2529297,4.0097656,2.2529297  c2.0849609,0,3.1523438-1.2490234,4.0097656-2.2524414c0.8457031-0.9912109,1.3789062-1.5522461,2.4892578-1.5522461  c1.1074219,0,1.6396484,0.5605469,2.4853516,1.5512695c0.8564453,1.0039062,1.9228516,2.253418,4.0078125,2.253418  s3.1513672-1.2495117,4.0087891-2.2529297c0.8457031-0.9912109,1.3789062-1.5517578,2.4873047-1.5517578  c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461c0.8574219,1.003418,1.9248047,2.2524414,4.0097656,2.2524414  c2.0859375,0,3.1533203-1.2495117,4.0107422-2.2529297c0.8457031-0.9912109,1.3789062-1.5517578,2.4882812-1.5517578  c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461c0.8574219,1.003418,1.9248047,2.2524414,4.0097656,2.2524414  c2.0869141,0,3.1533203-1.2490234,4.0117188-2.2529297c0.8466797-0.9912109,1.3789062-1.5517578,2.4892578-1.5517578  c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578c0.8574219,1.0039062,1.9238281,2.2529297,4.0097656,2.2529297  s3.1533203-1.2490234,4.0107422-2.2524414c0.8476562-0.9912109,1.3808594-1.5522461,2.4921875-1.5522461  c1.1123047,0,1.6464844,0.5610352,2.4941406,1.5522461c0.8574219,1.003418,1.9257812,2.2524414,4.0126953,2.2524414  c2.0878906,0,3.1552734-1.2490234,4.0136719-2.2524414C87.3535156,49.6586914,87.8876953,49.0976562,89,49.0976562  c0.5527344,0,1-0.4477539,1-1S89.5527344,47.0976562,89,47.0976562z" />
-                            <path
-                                d="M89,65.6464844c-2.0878906,0-3.1552734,1.2490234-4.0136719,2.2524414  c-0.8476562,0.9912109-1.3818359,1.5522461-2.4941406,1.5522461c-1.1113281,0-1.6455078-0.5610352-2.4931641-1.5522461  c-0.8574219-1.003418-1.9257812-2.2524414-4.0136719-2.2524414c-2.0869141,0-3.1542969,1.2490234-4.0126953,2.2529297  c-0.8466797,0.9912109-1.3798828,1.5517578-2.4902344,1.5517578c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.0039062-1.9238281-2.2529297-4.0097656-2.2529297s-3.1533203,1.2490234-4.0097656,2.2524414  c-0.8476562,0.9912109-1.3808594,1.5522461-2.4912109,1.5522461c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.003418-1.9248047-2.2529297-4.0107422-2.2529297c-2.0849609,0-3.1523438,1.2490234-4.0097656,2.2524414  c-0.8457031,0.9912109-1.3789062,1.5522461-2.4892578,1.5522461c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578  c-0.8574219-1.003418-1.9248047-2.2529297-4.0107422-2.2529297c-2.0849609,0-3.1513672,1.2495117-4.0087891,2.2529297  c-0.8457031,0.9912109-1.3789062,1.5517578-2.4873047,1.5517578s-1.640625-0.5605469-2.4863281-1.5517578  c-0.8564453-1.0039062-1.9228516-2.2529297-4.0068359-2.2529297c-2.0859375,0-3.1533203,1.2495117-4.0107422,2.2529297  c-0.8457031,0.9912109-1.3789062,1.5517578-2.4882812,1.5517578s-1.6425781-0.5605469-2.4882812-1.5517578  C14.1523438,66.8955078,13.0859375,65.6464844,11,65.6464844c-0.5527344,0-1,0.4477539-1,1s0.4472656,1,1,1  c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578c0.8574219,1.0039062,1.9238281,2.2529297,4.0097656,2.2529297  c2.0849609,0,3.1523438-1.2490234,4.0097656-2.2524414c0.8457031-0.9912109,1.3789062-1.5522461,2.4892578-1.5522461  c1.1074219,0,1.6396484,0.5605469,2.4853516,1.5512695c0.8564453,1.0039062,1.9228516,2.253418,4.0078125,2.253418  s3.1513672-1.2495117,4.0087891-2.2529297c0.8457031-0.9912109,1.3789062-1.5517578,2.4873047-1.5517578  c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461c0.8574219,1.003418,1.9248047,2.2524414,4.0097656,2.2524414  c2.0859375,0,3.1533203-1.2495117,4.0107422-2.2529297c0.8457031-0.9912109,1.3789062-1.5517578,2.4882812-1.5517578  c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461c0.8574219,1.003418,1.9248047,2.2524414,4.0097656,2.2524414  c2.0869141,0,3.1533203-1.2490234,4.0117188-2.2529297c0.8466797-0.9912109,1.3789062-1.5517578,2.4892578-1.5517578  c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578c0.8574219,1.0039062,1.9238281,2.2529297,4.0097656,2.2529297  s3.1533203-1.2490234,4.0107422-2.2524414c0.8476562-0.9912109,1.3808594-1.5522461,2.4921875-1.5522461  c1.1123047,0,1.6464844,0.5610352,2.4941406,1.5522461c0.8574219,1.003418,1.9257812,2.2524414,4.0126953,2.2524414  c2.0878906,0,3.1552734-1.2490234,4.0136719-2.2524414C87.3535156,68.2075195,87.8876953,67.6464844,89,67.6464844  c0.5527344,0,1-0.4477539,1-1S89.5527344,65.6464844,89,65.6464844z" />
-                            <path
-                                d="M89,84.1953125c-2.0878906,0-3.1552734,1.2490234-4.0136719,2.2524414C84.1386719,87.4389648,83.6044922,88,82.4921875,88  c-1.1113281,0-1.6455078-0.5610352-2.4931641-1.5522461c-0.8574219-1.003418-1.9257812-2.2524414-4.0136719-2.2524414  c-2.0869141,0-3.1542969,1.2490234-4.0126953,2.2529297C71.1259766,87.4394531,70.5927734,88,69.4824219,88  c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578c-0.8574219-1.0039062-1.9238281-2.2529297-4.0097656-2.2529297  s-3.1533203,1.2490234-4.0097656,2.2524414C58.1269531,87.4389648,57.59375,88,56.4833984,88  c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578c-0.8574219-1.003418-1.9248047-2.2529297-4.0107422-2.2529297  c-2.0849609,0-3.1523438,1.2490234-4.0097656,2.2524414C45.1289062,87.4389648,44.5957031,88,43.4853516,88  c-1.109375,0-1.6425781-0.5605469-2.4882812-1.5517578c-0.8574219-1.003418-1.9248047-2.2529297-4.0107422-2.2529297  c-2.0849609,0-3.1513672,1.2495117-4.0087891,2.2529297C32.1318359,87.4394531,31.5986328,88,30.4902344,88  s-1.640625-0.5605469-2.4863281-1.5517578c-0.8564453-1.0039062-1.9228516-2.2529297-4.0068359-2.2529297  c-2.0859375,0-3.1533203,1.2495117-4.0107422,2.2529297C19.140625,87.4394531,18.6074219,88,17.4980469,88  s-1.6425781-0.5605469-2.4882812-1.5517578C14.1523438,85.4443359,13.0859375,84.1953125,11,84.1953125  c-0.5527344,0-1,0.4477539-1,1s0.4472656,1,1,1c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578  C14.3457031,88.7509766,15.4121094,90,17.4980469,90c2.0849609,0,3.1523438-1.2490234,4.0097656-2.2524414  c0.8457031-0.9912109,1.3789062-1.5522461,2.4892578-1.5522461c1.1074219,0,1.6396484,0.5605469,2.4853516,1.5512695  C27.3388672,88.7504883,28.4052734,90,30.4902344,90s3.1513672-1.2495117,4.0087891-2.2529297  c0.8457031-0.9912109,1.3789062-1.5517578,2.4873047-1.5517578c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461  C40.3330078,88.7509766,41.4003906,90,43.4853516,90c2.0859375,0,3.1533203-1.2495117,4.0107422-2.2529297  c0.8457031-0.9912109,1.3789062-1.5517578,2.4882812-1.5517578c1.1103516,0,1.6435547,0.5610352,2.4892578,1.5522461  C53.3310547,88.7509766,54.3984375,90,56.4833984,90c2.0869141,0,3.1533203-1.2490234,4.0117188-2.2529297  c0.8466797-0.9912109,1.3789062-1.5517578,2.4892578-1.5517578c1.109375,0,1.6425781,0.5605469,2.4882812,1.5517578  C66.3300781,88.7509766,67.3964844,90,69.4824219,90s3.1533203-1.2490234,4.0107422-2.2524414  c0.8476562-0.9912109,1.3808594-1.5522461,2.4921875-1.5522461c1.1123047,0,1.6464844,0.5610352,2.4941406,1.5522461  C79.3369141,88.7509766,80.4052734,90,82.4921875,90c2.0878906,0,3.1552734-1.2490234,4.0136719-2.2524414  C87.3535156,86.7563477,87.8876953,86.1953125,89,86.1953125c0.5527344,0,1-0.4477539,1-1S89.5527344,84.1953125,89,84.1953125z" />
-                        </svg>
-                    </div>
-                    <div class="absolute right-0 z-10 opacity-0 -top-10 lg:opacity-100">
-                        <svg data-aos="fade-down" data-aos-delay="300" data-aos-duration="700" data-aos-easing="ease-in-out"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                            x="0px" y="0px" viewBox="0 0 90 112.5" class="fill-current w-[400px] text-accent"
-                            style="enable-background:new 0 0 90 90;" xml:space="preserve">
-                            <title>DiagonalLines3</title>
-                            <polygon points="0,6.5110002 6.5110002,0 3.7490001,0 0,3.7490001 " />
-                            <polygon points="0,26.4909992 26.4909992,0 23.7290001,0 0,23.7290001 " />
-                            <polygon points="63.6889992,0 0,63.6889992 0,66.4509964 66.4509964,0 " />
-                            <polygon points="83.6689987,0 0,83.6689987 0,86.4309998 86.4309998,0 " />
-                            <polygon points="90,13.6490002 13.6490002,90 16.4109993,90 90,16.4109993 " />
-                            <polygon points="90,33.6290016 33.6290016,90 36.3909988,90 90,36.3909988 " />
-                            <polygon points="90,53.6090012 53.6090012,90 56.3709984,90 90,56.3709984 " />
-                            <polygon points="90,73.5889969 73.5889969,90 76.3509979,90 90,76.3509979 " />
-                            <polygon points="43.7089996,0 0,43.7089996 0,46.4710007 46.4710007,0 " />
-                        </svg>
-                    </div>
-                    <div class="absolute top-0 bottom-0 z-10 p-12 tracking-tight lg:p-40 bg-primary/60">
-                        <div id="animate" data-aos="fade-right" data-aos-delay="50" data-aos-duration="600"
-                            data-aos-easing="ease-in-out">
-                            <h1 class="w-full text-5xl font-bold text-white uppercase md:w-5/6 lg:w-4/6 lg:text-8xl">
-                                Financial &
-                                <span class="italic lowercase highlight text-accent">operations</span> principal
-                            </h1>
-                            <a href="#"
-                                class="inline-flex items-center px-12 py-4 my-10 space-x-2 text-sm font-bold text-white uppercase transition duration-300 ease-linear rounded-lg hover:bg-primary hover:-translate-y-3 bg-accent">Submit</a>
+
+                @foreach (config('homepage.hero') as $hero)
+                    <div id="jumbotron-content" id="{{ $hero['id'] }}"
+                        x-show.transition.in.opacity.duration.1000="jumbo === {{ $hero['id'] }}">
+                        <img class="absolute top-0 bottom-0 object-cover w-full h-full origin-center lg:object-cover"
+                            src="{{ $hero['image'] }}" alt="">
+
+                        <div class="absolute top-0 bottom-0 justify-center z-10 w-full p-10 tracking-tight lg:p-40 bg-{{ $hero['color'] }}/60">
+                            <div id="animate" data-aos="fade-right" data-aos-delay="50" data-aos-duration="600"
+                                data-aos-easing="ease-in-out">
+                                <h1 class="w-full text-6xl font-bold text-white uppercase drop-shadow-lg md:w-5/6 lg:w-4/6 lg:text-8xl" data-aos="fade-right" data-aos-delay="50">
+                                    {{ $hero['title'] }}
+                                </h1>
+                                <a href="{{ $hero['href'] }}"
+                                    class="inline-flex items-center px-12 py-4 my-10 space-x-2 text-sm font-bold text-white uppercase transition duration-300 ease-linear rounded-lg hover:bg-primary hover:-translate-y-3 bg-accent">Submit</a>
+                            </div>
+
                         </div>
-
                     </div>
-                </div>
+                @endforeach
 
-                <div id="jumbotron-content" id="1" x-show.transition.in.opacity.duration.1000="jumbo === 1">
-                    <img class="absolute top-0 bottom-0 object-cover w-full h-full origin-center lg:object-cover"
-                        src="https://images.unsplash.com/photo-1664575599736-c5197c684128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                        alt="">
-
-                    <div class="absolute top-0 bottom-0 z-10 w-full p-12 tracking-tight lg:p-40 bg-primary/60">
-                        <div id="animate" data-aos="fade-right" data-aos-delay="50" data-aos-duration="600"
-                            data-aos-easing="ease-in-out">
-                            <h1 class="w-full text-5xl font-bold text-white uppercase md:w-5/6 lg:w-4/6 lg:text-8xl">
-                                Financial &
-                                <span class="italic lowercase highlight text-accent">operations</span> principal
-                            </h1>
-                            <a href="#"
-                                class="inline-flex items-center px-12 py-4 my-10 space-x-2 text-sm font-bold text-white uppercase transition duration-300 ease-linear rounded-lg hover:bg-primary hover:-translate-y-3 bg-accent">Submit</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div id="jumbotron-content" id="2" x-show.transition.in.opacity.duration.1000="jumbo === 2">
-                    <img class="absolute top-0 bottom-0 object-cover w-full h-full origin-center lg:object-cover"
-                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                        alt="">
-
-                    <div class="absolute right-0 z-10 opacity-0 -top-10 lg:opacity-100">
-                        <svg data-aos="fade-down" data-aos-delay="300" data-aos-duration="700" data-aos-easing="ease-in-out"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                            x="0px" y="0px" viewBox="0 0 90 112.5" class="fill-current w-[400px] text-accent"
-                            style="enable-background:new 0 0 90 90;" xml:space="preserve">
-                            <title>DiagonalLines3</title>
-                            <polygon points="0,6.5110002 6.5110002,0 3.7490001,0 0,3.7490001 " />
-                            <polygon points="0,26.4909992 26.4909992,0 23.7290001,0 0,23.7290001 " />
-                            <polygon points="63.6889992,0 0,63.6889992 0,66.4509964 66.4509964,0 " />
-                            <polygon points="83.6689987,0 0,83.6689987 0,86.4309998 86.4309998,0 " />
-                            <polygon points="90,13.6490002 13.6490002,90 16.4109993,90 90,16.4109993 " />
-                            <polygon points="90,33.6290016 33.6290016,90 36.3909988,90 90,36.3909988 " />
-                            <polygon points="90,53.6090012 53.6090012,90 56.3709984,90 90,56.3709984 " />
-                            <polygon points="90,73.5889969 73.5889969,90 76.3509979,90 90,76.3509979 " />
-                            <polygon points="43.7089996,0 0,43.7089996 0,46.4710007 46.4710007,0 " />
-                        </svg>
-                    </div>
-                    <div class="absolute top-0 bottom-0 z-10 w-full p-12 tracking-tight lg:p-40 bg-primary/60">
-                        <div id="animate" data-aos="fade-right" data-aos-delay="50" data-aos-duration="600"
-                            data-aos-easing="ease-in-out">
-                            <h1 class="w-full text-4xl font-bold text-white uppercase md:w-5/6 lg:w-4/6 lg:text-8xl">
-                                OUTSOURCED CHIEF & <br />
-                                <span class="italic lowercase highlight text-accent">Financial Officer</span>
-                            </h1>
-                            <a href="#"
-                                class="inline-flex items-center px-12 py-4 my-10 space-x-2 text-sm font-bold text-white uppercase transition duration-300 ease-linear rounded-lg hover:bg-primary hover:-translate-y-3 bg-accent">Submit</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div id="jumbotron-content" id="3" x-show.transition.in.opacity.duration.1000="jumbo === 3">
-                    <img class="absolute top-0 bottom-0 object-cover w-full h-full origin-center lg:object-cover"
-                        src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                        alt="">
-
-
-                    <div class="absolute top-0 bottom-0 z-10 p-12 tracking-tight lg:p-40 bg-primary/60">
-                        <div id="animate" data-aos="fade-right" data-aos-delay="50" data-aos-duration="600"
-                            data-aos-easing="ease-in-out">
-                            <h1 class="w-full text-5xl font-bold text-white uppercase md:w-5/6 lg:w-4/6 lg:text-8xl">
-                                Merger & acquisition due diligence
-                            </h1>
-                            <a href="#"
-                                class="inline-flex items-center px-12 py-4 my-10 space-x-2 text-sm font-bold text-white uppercase transition duration-300 ease-linear rounded-lg hover:bg-primary hover:-translate-y-3 bg-accent">Submit</a>
-                        </div>
-
-                    </div>
-                </div>
 
             </div>
             <div id="jumbotron-controls"
-                class="flex flex-col justify-center px-10 py-16 space-y-6 lg:space-y-0 lg:space-x-10 lg:flex-row">
-                <div id="item1" x-on:click="jumbo = 0" x-bind:class="{ 'border-gray-200': jumbo === 0 }"
-                    class="flex flex-row hover:cursor-pointer items-center p-6 space-x-6 border-4 border-trasparent  rounded-bl-[50px] rounded-tr-[50px]">
-                    <div>
-                        <p class="text-5xl font-bold text-accent">1</p>
+                class="grid grid-cols-12 gap-10 px-10 py-16">
+                @foreach (config('homepage.hero') as $hero)
+                    <div id="item1" data-aos="fade-up" x-on:click="jumbo = {{ $hero['id'] }}"
+                        x-bind:class="{ 'border-gray-200': jumbo ===  {{ $hero['id'] }}}"
+                        class="col-span-12 md:col-span-6 lg:col-span-3 flex hover:border-gray-200 transition duration-200 flex-row hover:cursor-pointer items-center p-6 space-x-6 border-4 border-transparent  rounded-bl-[50px] rounded-tr-[50px]">
+                        <div>
+                            <p class="text-5xl font-bold text-accent">{{ $hero['id'] }}</p>
+                        </div>
+                        <div>
+                            <p class="text-xl font-bold text-balance text-primary">{{ $hero['title'] }}</p>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-2xl font-bold text-primary">Financial & <i>operations</i> Principal</p>
-                    </div>
-                </div>
-                <div id="item2" x-on:click="jumbo = 1" x-bind:class="{ 'border-gray-200': jumbo === 1 }"
-                    class="flex flex-row hover:cursor-pointer items-center p-6 space-x-6 border-4 border-trasparent  rounded-bl-[50px] rounded-tr-[50px]">
-
-                    <div>
-                        <p class="text-5xl font-bold text-accent">2</p>
-                    </div>
-                    <div>
-                        <p class="text-2xl font-bold text-primary"><i>Strategy</i> & corporate Finance</p>
-                    </div>
-                </div>
-                <div id="item3" x-on:click="jumbo = 2" x-bind:class="{ 'border-gray-200': jumbo === 2 }"
-                    class="flex flex-row hover:cursor-pointer items-center p-6 space-x-6 border-4 border-trasparent  rounded-bl-[50px] rounded-tr-[50px]">
-
-                    <div>
-                        <p class="text-5xl font-bold text-accent">3</p>
-                    </div>
-                    <div>
-                        <p class="text-2xl font-bold text-primary">Outsourced Chief <i>Financial Officer</i></p>
-                    </div>
-                </div>
-                <div id="item4" x-on:click="jumbo = 3" x-bind:class="{ 'border-gray-200': jumbo === 3 }"
-                    class="flex flex-row hover:cursor-pointer items-center p-6 space-x-6 border-4 border-trasparent  rounded-bl-[50px] rounded-tr-[50px]">
-
-                    <div>
-                        <p class="text-5xl font-bold text-accent">4</p>
-                    </div>
-                    <div>
-                        <p class="text-2xl font-bold text-primary">Merger & acquisition due diligence</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 
         <div id="industries" class="bg-accent rounded-bl-[50px] rounded-tr-[50px] relative">
 
-            <h1 class="pt-16 pb-8 font-bold text-center uppercase text-7xl text-primary">Industries</h1>
-            <p class="w-3/6 mx-auto text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                assumenda
-                impedit cum reprehenderit commodi repudiandae similique sequi, consequatur.</p>
-            <div class="grid grid-cols-12 px-20 py-32 divide-y md:divide-y-0 lg:divide-x divide-white/60">
-                <div class="col-span-12 p-6 md:col-span-6 lg:col-span-3" data-aos="fade-up" data-aos-duration="700">
+            <h1 class="pt-16 pb-8 text-5xl font-bold text-center uppercase lg:text-7xl text-primary">{{ config('homepage.industries.title') }}</h1>
+            <p class="w-5/6 mx-auto text-center text-white text-balance lg:w-3/6">{{ config('homepage.industries.short') }}</p>
+            <div class="grid grid-cols-12 px-20 py-20 divide-y lg:py-32 md:divide-y-0 lg:divide-x divide-white/60">
+                @foreach (config('homepage.industries.data') as $industry)
+                <div data-aos="fade-up" class="col-span-12 p-6 md:col-span-6 lg:col-span-3" data-aos="fade-up" data-aos-duration="700">
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-24 h-24 fill-white">
-                            <path fill-rule="evenodd"
-                                d="M3 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5H15v-18a.75.75 0 000-1.5H3zM6.75 19.5v-2.25a.75.75 0 01.75-.75h3a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-3a.75.75 0 01-.75-.75zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 010 1.5h-.75A.75.75 0 016 6.75zM6.75 9a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM6 12.75a.75.75 0 01.75-.75h.75a.75.75 0 010 1.5h-.75a.75.75 0 01-.75-.75zM10.5 6a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zm-.75 3.75A.75.75 0 0110.5 9h.75a.75.75 0 010 1.5h-.75a.75.75 0 01-.75-.75zM10.5 12a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM16.5 6.75v15h5.25a.75.75 0 000-1.5H21v-12a.75.75 0 000-1.5h-4.5zm1.5 4.5a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008zm.75 2.25a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75v-.008a.75.75 0 00-.75-.75h-.008zM18 17.25a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z"
-                                clip-rule="evenodd" />
-                        </svg>
+                       {{ htmlentities($industry['icon']) }}
 
                     </p>
-                    <h3 class="pt-5 text-2xl font-bold text-primary">Industrial Manufacturing</h3>
-                    <p class="py-5 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis molestias,
-                        natus
-                        nisi est error
-                        dolores quis magnam!</p>
+                    <h3 class="pt-5 text-2xl font-bold text-primary">{{ $industry['title']}}</h3>
+                    <p class="py-5 text-white text-blance">{{ $industry['content'] }}</p>
                 </div>
-                <div class="col-span-12 p-6 md:col-span-6 lg:col-span-3" data-aos="fade-up" data-aos-duration="700">
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-24 h-24 fill-white">
-                            <path fill-rule="evenodd"
-                                d="M15.22 6.268a.75.75 0 01.968-.432l5.942 2.28a.75.75 0 01.431.97l-2.28 5.941a.75.75 0 11-1.4-.537l1.63-4.251-1.086.483a11.2 11.2 0 00-5.45 5.174.75.75 0 01-1.199.19L9 12.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.75-6.75a.75.75 0 011.06 0l3.606 3.605a12.694 12.694 0 015.68-4.973l1.086-.484-4.251-1.631a.75.75 0 01-.432-.97z"
-                                clip-rule="evenodd" />
-                        </svg>
-
-
-                    </p>
-                    <h3 class="pt-5 text-2xl font-bold text-primary">Growing</h3>
-                    <p class="py-5 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis molestias,
-                        natus
-                        nisi est error
-                        dolores quis magnam!</p>
-                </div>
-                <div class="col-span-12 p-6 md:col-span-6 lg:col-span-3" data-aos="fade-up" data-aos-duration="700">
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-24 h-24 fill-white">
-                            <path fill-rule="evenodd"
-                                d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
-                                clip-rule="evenodd" />
-                        </svg>
-
-
-                    </p>
-                    <h3 class="pt-5 text-2xl font-bold text-primary">Instant</h3>
-                    <p class="py-5 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis molestias,
-                        natus
-                        nisi est error
-                        dolores quis magnam!</p>
-                </div>
-                <div class="col-span-12 p-6 md:col-span-6 lg:col-span-3" data-aos="fade-up" data-aos-duration="700">
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-24 h-24 fill-white">
-                            <path
-                                d="M5.85 3.5a.75.75 0 00-1.117-1 9.719 9.719 0 00-2.348 4.876.75.75 0 001.479.248A8.219 8.219 0 015.85 3.5zM19.267 2.5a.75.75 0 10-1.118 1 8.22 8.22 0 011.987 4.124.75.75 0 001.48-.248A9.72 9.72 0 0019.266 2.5z" />
-                            <path fill-rule="evenodd"
-                                d="M12 2.25A6.75 6.75 0 005.25 9v.75a8.217 8.217 0 01-2.119 5.52.75.75 0 00.298 1.206c1.544.57 3.16.99 4.831 1.243a3.75 3.75 0 107.48 0 24.583 24.583 0 004.83-1.244.75.75 0 00.298-1.205 8.217 8.217 0 01-2.118-5.52V9A6.75 6.75 0 0012 2.25zM9.75 18c0-.034 0-.067.002-.1a25.05 25.05 0 004.496 0l.002.1a2.25 2.25 0 11-4.5 0z"
-                                clip-rule="evenodd" />
-                        </svg>
-
-
-                    </p>
-                    <h3 class="pt-5 text-2xl font-bold text-primary">Always Ready</h3>
-                    <p class="py-5 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis molestias,
-                        natus
-                        nisi est error
-                        dolores quis magnam!</p>
-                </div>
+                @endforeach
+              
             </div>
         </div>
 
         <div id="business" class="relative w-5/6 mx-auto">
-            <h1 class="pt-32 pb-8 font-bold text-center uppercase text-7xl text-primary">Business Services</h1>
-            <div class="absolute right-0 -z-10 -top-10">
-                <svg id="10015.io" viewBox="0 0 1080 1080" class="w-32 h-32 rotate-45 lg:w-80 lg:h-80 opacity-40"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <pattern id="svg-pattern" x="0" y="0" width="20" height="20"
-                            patternUnits="userSpaceOnUse" patternTransform="translate(0, 0) rotate(0) skewX(-45)"><svg
-                                width="20" height="20" viewBox="0 0 100 100">
-                                <g fill="#000000" opacity="1">
-                                    <rect y="60" width="20" height="100" transform="rotate(-90 0 60)">
-                                    </rect>
-                                </g>
-                            </svg></pattern>
-                    </defs>
-                    <rect x="0" y="0" width="100%" height="100%" fill="rgba(255, 255, 255, 0)">
-                    </rect>
-                    <rect x="0" y="0" width="100%" height="100%" fill="url(#svg-pattern)"></rect>
-                </svg>
-            </div>
+            <h1 class="pt-32 pb-8 font-bold text-center uppercase text-7xl text-primary">{{ config('homepage.services.title') }}</h1>
+            
             <div id="content" x-data="{ activeTab: 0 }">
 
                 <div id="tab-menu" class="flex flex-row justify-center my-16 space-x-10">
-                    <button x-on:click="activeTab = 0" x-bind:class="{ 'bg-accent text-white': activeTab === 0 }"
-                        class="font-bold px-4 py-3 rounded-tl-[20px] rounded-br-[20px]">Consulting</button>
-                    <button x-on:click="activeTab = 1" x-bind:class="{ 'bg-accent text-white': activeTab === 1 }"
-                        class="font-bold px-4 py-3 rounded-tl-[20px] rounded-br-[20px]">Financial</button>
-                    <button x-on:click="activeTab = 2" x-bind:class="{ 'bg-accent text-white': activeTab === 2 }"
-                        class="font-bold px-4 py-3 rounded-tl-[20px] rounded-br-[20px]">Other Solution</button>
+                    @foreach (config('homepage.services.types') as $tab)
+              
+                    <button x-on:click="activeTab = {{ $tab['id'] }}" x-bind:class="{ 'bg-accent text-white': activeTab === {{ $tab['id'] }} }"
+                        class="font-bold text-primary px-4 py-3 rounded-tl-[20px] rounded-br-[20px]">{{ $tab['title'] }}</button>
+                    @endforeach
                 </div>
 
                 <div id="tab-content">
-                    <div id="content-1" x-show.transition.in.opacity.duration.1000="activeTab === 0">
+                    <div id="content-1" data-aos="fade-up" x-show.transition.in.opacity.duration.1000="activeTab === {{ config('homepage.services.types.consulting.id') }}">
                         <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
+                            @foreach(config('homepage.services.types.consulting.data') as $tabContent)
                             <div id="card" class="col-span-12 lg:col-span-4 group">
                                 <a href="" class="relative">
                                     <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://images.unsplash.com/photo-1622463461333-611830d028bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                                        src="{{ $tabContent['image'] }}"
                                         alt="">
                                     <h1
                                         class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Business Unit
-                                        Strategy
+                                        {{ $tabContent['title'] }}
                                     </h1>
                                 </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
+                                <p class="py-5 text-center">{{ $tabContent['content'] }}</p>
                                 <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
+                                <a href="{{ $tabContent['href'] }}"
                                     class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                         more</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -319,77 +108,25 @@
 
                                 </a>
                             </div>
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://plus.unsplash.com/premium_photo-1683141437785-dd83524bd24d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Technical Details
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Finance
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                    <div id="content-2" x-show.transition.in.opacity.duration.1000="activeTab === 1">
+                    <div id="content-2" data-aos="fade-up" x-show.transition.in.opacity.duration.1000="activeTab === {{ config('homepage.services.types.financial.id')}}">
                         <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
+                            @foreach(config('homepage.services.types.financial.data') as $tabContent)
                             <div id="card" class="col-span-12 lg:col-span-4 group">
                                 <a href="" class="relative">
                                     <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                                        src="{{ $tabContent['image'] }}"
                                         alt="">
                                     <h1
                                         class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Management
+                                        {{ $tabContent['title'] }}
                                     </h1>
                                 </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
+                                <p class="py-5 text-center">{{ $tabContent['content'] }}</p>
                                 <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
+                                <a href="{{ $tabContent['href'] }}"
                                     class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                         more</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -401,77 +138,25 @@
 
                                 </a>
                             </div>
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://images.unsplash.com/photo-1551135049-8a33b5883817?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Logic
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2342&q=80"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Advisory
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                    <div id="content-3" x-show.transition.in.opacity.duration.1000="activeTab === 2">
-                        <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
+                    <div id="content-3" data-aos="fade-up" x-show.transition.in.opacity.duration.1000="activeTab === {{ config('homepage.services.types.other.id')}}">
+                         <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
+                            @foreach(config('homepage.services.types.other.data') as $tabContent)
                             <div id="card" class="col-span-12 lg:col-span-4 group">
                                 <a href="" class="relative">
                                     <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                                        src="{{ $tabContent['image'] }}"
                                         alt="">
                                     <h1
                                         class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Unity
+                                        {{ $tabContent['title'] }}
                                     </h1>
                                 </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
+                                <p class="py-5 text-center">{{ $tabContent['content'] }}</p>
                                 <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
+                                <a href="{{ $tabContent['href'] }}"
                                     class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
                                         more</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -483,58 +168,7 @@
 
                                 </a>
                             </div>
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Learn
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        Internet
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">The effort vastly improved the company’s planning and execution
-                                    functions, they knew that in
-                                    order to succeed in this era of technology their accounting systems needed.</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href=""
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -1057,17 +691,14 @@
 
         <div id="posts" class="rounded-bl-[50px] rounded-tr-[50px] overflow-hidden my-32">
             <div class="grid grid-cols-2 gap-6">
-                <div class="relative col-span-2 lg:col-span-1">
+                @foreach($posts as $post)
+                <div class="relative col-span-2 lg:col-span-1" data-aos="fade-up">
                     <img class="object-cover w-full origin-center h-[500px]"
-                        src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                        src="{{$post->image}}"
                         alt="">
                     <div class="absolute w-5/6 p-10 lg:w-3/6 bottom-10 left-10 bg-accent rounded-tl-3xl rounded-br-3xl">
-                        <h1 class="text-2xl font-bold tracking-tight text-white">Check our available spectrum of services
-                            to help
-                            subjects
-                            work
-                            better</h1>
-                        <a href=""
+                        <h1 class="text-2xl font-bold tracking-tight text-white">{{$post->title}}</h1>
+                        <a href="{{$post->slug}}"
                             class="inline-flex items-center py-5 space-x-2 text-sm font-medium text-white uppercase group"><span
                                 class="group-hover:text-primary">See
                                 more</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -1078,24 +709,7 @@
                             </svg></a>
                     </div>
                 </div>
-                <div class="relative col-span-2 lg:col-span-1">
-                    <img class="object-cover w-full origin-center h-[500px]"
-                        src="https://images.unsplash.com/photo-1624066970160-a7177aa3d010?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                        alt="">
-                    <div class="absolute w-5/6 p-10 lg:w-3/6 bottom-10 left-10 bg-primary rounded-tl-3xl rounded-br-3xl">
-                        <h1 class="text-2xl font-bold tracking-tight text-white">Find out our innovative progress for the
-                            vast majority of companies </h1>
-                        <a href=""
-                            class="inline-flex items-center py-5 space-x-2 text-sm font-medium text-white uppercase group"><span
-                                class="group-hover:text-accent">See
-                                more</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor"
-                                class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg></a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 
@@ -1128,7 +742,7 @@
         <div id="difference"
             class="relative rounded-bl-[50px] min-h-[500px] p-10 lg:p-20 rounded-tr-[50px] overflow-hidden my-32">
             <img class="absolute top-0 left-0 right-0 object-cover w-full h-full"
-                src="https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2334&q=80"
+                src="/img/differences/bg.avif"
                 alt="">
             <div class="relative z-10 bg-primary rounded-bl-[50px] rounded-tr-[50px] h-full w-full">
                 <div class="grid grid-cols-12 gap-6 px-12 py-16 lg:px-24 md:divide-x divide-white/20">
@@ -1220,8 +834,7 @@
         <div id="contact-form" class="rounded-bl-[50px] rounded-tr-[50px] overflow-hidden mb-32">
             <div class="grid grid-cols-12">
                 <div class="relative col-span-12 lg:col-span-5">
-                    <img class="absolute left-0 right-0 z-0 object-cover w-full h-full"
-                        src="https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                    <img class="absolute left-0 right-0 z-0 object-cover w-full h-full" src="/img/contact/bg.avif"
                         alt="">
                     <div class="relative top-0 left-0 right-0 z-10 object-cover h-full px-24 py-24 lg:px-32 bg-primary/80">
                         <h1 class="text-4xl font-bold text-white lg:text-6xl">

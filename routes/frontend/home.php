@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\TermsController;
 use Tabuna\Breadcrumbs\Trail;
@@ -34,4 +35,11 @@ Route::get('contact', [HomeController::class, 'contact'])
     ->breadcrumbs(function (Trail $trail) {
         $trail->parent('frontend.index')
             ->push(__('Contact'), route('frontend.pages.contact'));
+    });
+
+Route::get('blog', [BlogController::class, 'blog'])
+    ->name('pages.blog')
+    ->breadcrumbs(function (Trail $trail) {
+        $trail->parent('frontend.index')
+            ->push(__('Blog'), route('frontend.pages.contact'));
     });
