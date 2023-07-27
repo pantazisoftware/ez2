@@ -2,7 +2,7 @@
     <nav class="flex relative z-99 flex-row justify-between items-center py-9 bg-white px-[15px] lg:px-14"
         x-on:mouseover.away="open = false">
         <div>
-            <a href="">
+            <a href="{{ route('frontend.index') }}">
                 <img src="https://consulting.stylemixthemes.com/manchester/wp-content/uploads/sites/50/2021/08/logo_dark.svg"
                     alt=""></a>
         </div>

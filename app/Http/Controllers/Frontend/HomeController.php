@@ -18,6 +18,12 @@ class HomeController
         return view('frontend.index', compact('posts'));
     }
 
+    public function viewPost($slug)
+    {
+        $post = Post::where('slug', $slug)->firstOrFail();
+        return view('frontend.blog.post', compact('post'));
+    }
+
     public function services()
     {
         return view('frontend.pages.services');

@@ -23,7 +23,7 @@
         </div><!--form-group-->
 
 
-            <div class="py-5">
+            <div class="py-10">
                 <button class="bg-primary text-white px-4 py-2.5 font-bold tracking-tight rounded-lg hover:bg-accent transition duration-200 ease-linear" type="submit">@lang('Enable Two Factor Authentication')</button>
             </div>
 

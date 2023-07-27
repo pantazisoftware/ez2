@@ -43,7 +43,7 @@
                                 </div>
                             </div><!--form-group-->
 
-                            <div class="mb-0 form-group row">
+                            <div class="py-2 mb-0 form-group row">
                                 <div class="col-md-6 offset-md-4">
                                     <button class="bg-primary text-white px-4 py-2.5 font-bold tracking-tight rounded-lg hover:bg-accent transition duration-200 ease-linear" type="submit">@lang('Confirm Code')</button>
                                 </div>

@@ -18,6 +18,58 @@
                 :text="__('Dashboard')" />
         </li>
 
+        <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.auth.user.*') || Route::is('admin.auth.role.*'), 'c-open c-show') }}">
+                <x-utils.link
+                    href="#"
+                    icon="c-sidebar-nav-icon cil-newspaper"
+                    class="c-sidebar-nav-dropdown-toggle"
+                    :text="__('Blog Posts')" />
+
+                <ul class="c-sidebar-nav-dropdown-items">
+                    @if ($logged_in_user->hasAllAccess())
+                        <li class="c-sidebar-nav-item">
+                            <x-utils.link
+                                :href="route('admin.post.list')"
+                                class="c-sidebar-nav-link"
+                                :text="__('Posts List')"
+                                :active="activeClass(Route::is('admin.post.list'), 'c-active')" />
+                        </li>
+                        <li class="c-sidebar-nav-item">
+                            <x-utils.link
+                                :href="route('admin.post.create')"
+                                class="c-sidebar-nav-link"
+                                :text="__('Create Post')"
+                                :active="activeClass(Route::is('admin.post.create'), 'c-active')" />
+                        </li>
+                    @endif
+
+                   
+                </ul>
+            </li>
+            <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.auth.user.*') || Route::is('admin.auth.role.*'), 'c-open c-show') }}">
+                <x-utils.link
+                    href="#"
+                    icon="c-sidebar-nav-icon cil-newspaper"
+                    class="c-sidebar-nav-dropdown-toggle"
+                    :text="__('Pages Content')" />
+
+                <ul class="c-sidebar-nav-dropdown-items">
+                    @if ($logged_in_user->hasAllAccess())
+                        <li class="c-sidebar-nav-item">
+                            <x-utils.link
+                                :href="route('admin.page.content')"
+                                class="c-sidebar-nav-link"
+                                :text="__('Homepage')"
+                                :active="activeClass(Route::is('Homepage'), 'c-active')" />
+                        </li>
+                       
+                    @endif
+
+                   
+                </ul>
+            </li>
+        
+        
         @if (
             $logged_in_user->hasAllAccess() ||
             (

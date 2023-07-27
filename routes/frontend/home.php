@@ -43,3 +43,6 @@ Route::get('blog', [BlogController::class, 'blog'])
         $trail->parent('frontend.index')
             ->push(__('Blog'), route('frontend.pages.contact'));
     });
+
+
+Route::get('/blog/{slug}', [HomeController::class, 'viewPost'])->name('blog.post');

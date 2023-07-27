@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    protected $fillable = ['image', 'title', 'slug', 'content'];
     use HasFactory;
 }

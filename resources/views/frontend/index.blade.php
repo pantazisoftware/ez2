@@ -4,179 +4,20 @@
 
 @section('content')
     <div class="p-2 lg:px-16">
-        <div id="jumbo" x-data="{ jumbo: 1 }">
-            <div id="jumbotron"
-                class="w-full min-h-[400px] lg:h-[800px] relative rounded-bl-[50px] rounded-tr-[50px] overflow-hidden">
+      
+        @component('components.frontend.hero', ['hero_data' => config('homepage.hero')])
+        @endcomponent
+
+        @component('components.frontend.industries', ['industries' => config('homepage.industries')])
+        @endcomponent
+
+        @component('components.frontend.business', ['business' => config('homepage.services')])
+        @endcomponent
 
 
-                @foreach (config('homepage.hero') as $hero)
-                    <div id="jumbotron-content" id="{{ $hero['id'] }}"
-                        x-show.transition.in.opacity.duration.1000="jumbo === {{ $hero['id'] }}">
-                        <img class="absolute top-0 bottom-0 object-cover w-full h-full origin-center lg:object-cover"
-                            src="{{ $hero['image'] }}" alt="">
+        
 
-                        <div class="absolute top-0 bottom-0 justify-center z-10 w-full p-10 tracking-tight lg:p-40 bg-{{ $hero['color'] }}/60">
-                            <div id="animate" data-aos="fade-right" data-aos-delay="50" data-aos-duration="600"
-                                data-aos-easing="ease-in-out">
-                                <h1 class="w-full text-6xl font-bold text-white uppercase drop-shadow-lg md:w-5/6 lg:w-4/6 lg:text-8xl" data-aos="fade-right" data-aos-delay="50">
-                                    {{ $hero['title'] }}
-                                </h1>
-                                <a href="{{ $hero['href'] }}"
-                                    class="inline-flex items-center px-12 py-4 my-10 space-x-2 text-sm font-bold text-white uppercase transition duration-300 ease-linear rounded-lg hover:bg-primary hover:-translate-y-3 bg-accent">Submit</a>
-                            </div>
-
-                        </div>
-                    </div>
-                @endforeach
-
-
-            </div>
-            <div id="jumbotron-controls"
-                class="grid grid-cols-12 gap-10 px-10 py-16">
-                @foreach (config('homepage.hero') as $hero)
-                    <div id="item1" data-aos="fade-up" x-on:click="jumbo = {{ $hero['id'] }}"
-                        x-bind:class="{ 'border-gray-200': jumbo ===  {{ $hero['id'] }}}"
-                        class="col-span-12 md:col-span-6 lg:col-span-3 flex hover:border-gray-200 transition duration-200 flex-row hover:cursor-pointer items-center p-6 space-x-6 border-4 border-transparent  rounded-bl-[50px] rounded-tr-[50px]">
-                        <div>
-                            <p class="text-5xl font-bold text-accent">{{ $hero['id'] }}</p>
-                        </div>
-                        <div>
-                            <p class="text-xl font-bold text-balance text-primary">{{ $hero['title'] }}</p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-        <div id="industries" class="bg-accent rounded-bl-[50px] rounded-tr-[50px] relative">
-
-            <h1 class="pt-16 pb-8 text-5xl font-bold text-center uppercase lg:text-7xl text-primary">{{ config('homepage.industries.title') }}</h1>
-            <p class="w-5/6 mx-auto text-center text-white text-balance lg:w-3/6">{{ config('homepage.industries.short') }}</p>
-            <div class="grid grid-cols-12 px-20 py-20 divide-y lg:py-32 md:divide-y-0 lg:divide-x divide-white/60">
-                @foreach (config('homepage.industries.data') as $industry)
-                <div data-aos="fade-up" class="col-span-12 p-6 md:col-span-6 lg:col-span-3" data-aos="fade-up" data-aos-duration="700">
-                    <p>
-                       {{ htmlentities($industry['icon']) }}
-
-                    </p>
-                    <h3 class="pt-5 text-2xl font-bold text-primary">{{ $industry['title']}}</h3>
-                    <p class="py-5 text-white text-blance">{{ $industry['content'] }}</p>
-                </div>
-                @endforeach
-              
-            </div>
-        </div>
-
-        <div id="business" class="relative w-5/6 mx-auto">
-            <h1 class="pt-32 pb-8 font-bold text-center uppercase text-7xl text-primary">{{ config('homepage.services.title') }}</h1>
-            
-            <div id="content" x-data="{ activeTab: 0 }">
-
-                <div id="tab-menu" class="flex flex-row justify-center my-16 space-x-10">
-                    @foreach (config('homepage.services.types') as $tab)
-              
-                    <button x-on:click="activeTab = {{ $tab['id'] }}" x-bind:class="{ 'bg-accent text-white': activeTab === {{ $tab['id'] }} }"
-                        class="font-bold text-primary px-4 py-3 rounded-tl-[20px] rounded-br-[20px]">{{ $tab['title'] }}</button>
-                    @endforeach
-                </div>
-
-                <div id="tab-content">
-                    <div id="content-1" data-aos="fade-up" x-show.transition.in.opacity.duration.1000="activeTab === {{ config('homepage.services.types.consulting.id') }}">
-                        <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
-                            @foreach(config('homepage.services.types.consulting.data') as $tabContent)
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="{{ $tabContent['image'] }}"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        {{ $tabContent['title'] }}
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">{{ $tabContent['content'] }}</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href="{{ $tabContent['href'] }}"
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <div id="content-2" data-aos="fade-up" x-show.transition.in.opacity.duration.1000="activeTab === {{ config('homepage.services.types.financial.id')}}">
-                        <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
-                            @foreach(config('homepage.services.types.financial.data') as $tabContent)
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="{{ $tabContent['image'] }}"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        {{ $tabContent['title'] }}
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">{{ $tabContent['content'] }}</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href="{{ $tabContent['href'] }}"
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <div id="content-3" data-aos="fade-up" x-show.transition.in.opacity.duration.1000="activeTab === {{ config('homepage.services.types.other.id')}}">
-                         <div class="grid w-full grid-cols-12 gap-10 mx-auto sm:w-5/6 md:w-4/6 lg:w-full">
-                            @foreach(config('homepage.services.types.other.data') as $tabContent)
-                            <div id="card" class="col-span-12 lg:col-span-4 group">
-                                <a href="" class="relative">
-                                    <img class="h-64 w-full object-cover rounded-tl-[20px] rounded-br-[20px]"
-                                        src="{{ $tabContent['image'] }}"
-                                        alt="">
-                                    <h1
-                                        class="absolute bottom-0 right-10 left-10 px-4 rounded-tl-[20px] bg-primary/90 group-hover:bg-accent font-black text-base md:text-xl py-4 transition duration-200 ease-linear text-white">
-                                        {{ $tabContent['title'] }}
-                                    </h1>
-                                </a>
-                                <p class="py-5 text-center">{{ $tabContent['content'] }}</p>
-                                <hr class="h-1 my-3 bg-gray-200">
-                                <a href="{{ $tabContent['href'] }}"
-                                    class="inline-flex items-center justify-center w-full space-x-2 text-sm font-bold uppercase"><span>See
-                                        more</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-6 h-6 transition duration-200 ease-linear group-hover:text-accent group-hover:translate-x-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-
-                                </a>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div id="successful" class="relative rounded-tl-[50px] rounded-br-[50px] bg-primary overflow-hidden my-32">
+        {{-- <div id="successful" class="relative rounded-tl-[50px] rounded-br-[50px] bg-primary overflow-hidden my-32">
             <img class="absolute top-0 left-0 right-0 z-0 object-cover opacity-20"
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
                 alt="">
@@ -687,31 +528,10 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
 
-        <div id="posts" class="rounded-bl-[50px] rounded-tr-[50px] overflow-hidden my-32">
-            <div class="grid grid-cols-2 gap-6">
-                @foreach($posts as $post)
-                <div class="relative col-span-2 lg:col-span-1" data-aos="fade-up">
-                    <img class="object-cover w-full origin-center h-[500px]"
-                        src="{{$post->image}}"
-                        alt="">
-                    <div class="absolute w-5/6 p-10 lg:w-3/6 bottom-10 left-10 bg-accent rounded-tl-3xl rounded-br-3xl">
-                        <h1 class="text-2xl font-bold tracking-tight text-white">{{$post->title}}</h1>
-                        <a href="{{$post->slug}}"
-                            class="inline-flex items-center py-5 space-x-2 text-sm font-medium text-white uppercase group"><span
-                                class="group-hover:text-primary">See
-                                more</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor"
-                                class="w-6 h-6 transition duration-200 ease-linear group-hover:text-primary group-hover:translate-x-2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg></a>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
+       @component('components.frontend.posts', ['posts' => $posts])
+        @endcomponent
 
         <div id="team">
             <div id="team1" class="w-9/12 mx-auto">
@@ -755,7 +575,7 @@
                             class="inline-flex items-center justify-center w-full px-8 py-4 my-5 font-bold tracking-tight text-white uppercase rounded-lg md:w-auto bg-accent hover:text-primary">Contact
                             us</a>
                     </div>
-                    <div class="col-span-12 md:px-8 md:col-span-6 xl:col-span-3">
+                    <div class="col-span-12 md:px-8 md:col-span-6 xl:col-span-3" data-aos="fade-up">
                         <p class="pb-6 text-4xl font-bold text-accent">01</p>
 
                         <h2 class="pb-6 text-lg font-bold text-white uppercase">Practical booking functionality</h2>
@@ -764,7 +584,7 @@
                             Doloribus commodi ea,
                             placeat deserunt, culpa praesentium quod nobis.</p>
                     </div>
-                    <div class="col-span-12 md:px-8 md:col-span-6 xl:col-span-3">
+                    <div class="col-span-12 md:px-8 md:col-span-6 xl:col-span-3" data-aos="fade-up" data-aos-delay="200">
                         <p class="pb-6 text-4xl font-bold text-accent">02</p>
 
                         <h2 class="pb-6 text-lg font-bold text-white uppercase">Practical booking functionality</h2>
@@ -773,7 +593,7 @@
                             Doloribus commodi ea,
                             placeat deserunt, culpa praesentium quod nobis.</p>
                     </div>
-                    <div class="col-span-12 md:px-8 md:col-span-6 xl:col-span-3">
+                    <div class="col-span-12 md:px-8 md:col-span-6 xl:col-span-3" data-aos="fade-up" data-aos-delay="400">
                         <p class="pb-6 text-4xl font-bold text-accent">03</p>
 
                         <h2 class="pb-6 text-lg font-bold text-white uppercase">Practical booking functionality</h2>
@@ -787,12 +607,12 @@
         </div>
 
         <div id="building" class="py-16">
-            <h1 class="w-5/6 mx-auto text-6xl font-bold text-center lg:text-7xl text-primary">Building <span
+            <h1 class="w-5/6 mx-auto text-5xl font-bold text-center lg:text-7xl text-primary">Building <span
                     class="italic highlight text-accent">enduring</span> value
                 through
                 bold strategies</h1>
             <div class="grid w-9/12 grid-cols-12 gap-8 mx-auto my-24">
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
+                <div class="col-span-12 md:col-span-6 lg:col-span-3" data-aos="fade-up">
                     <div class="flex items-center space-x-4">
                         <div class="w-2 h-16 bg-accent"></div>
                         <div>
@@ -801,7 +621,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
+                <div class="col-span-12 md:col-span-6 lg:col-span-3" data-aos="fade-up">
                     <div class="flex items-center space-x-4">
                         <div class="w-2 h-16 bg-accent"></div>
                         <div>
@@ -810,7 +630,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
+                <div class="col-span-12 md:col-span-6 lg:col-span-3" data-aos="fade-up">
                     <div class="flex items-center space-x-4">
                         <div class="w-2 h-16 bg-accent"></div>
                         <div>
@@ -819,7 +639,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
+                <div class="col-span-12 md:col-span-6 lg:col-span-3" data-aos="fade-up">
                     <div class="flex items-center space-x-4">
                         <div class="w-2 h-16 bg-accent"></div>
                         <div>

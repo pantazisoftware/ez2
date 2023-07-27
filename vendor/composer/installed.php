@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'rappasoft/laravel-boilerplate',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'c8553e7e9d7bb8b55930c9b73f47ff45759ab767',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -655,6 +655,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'laravel/helpers' => array(
+            'pretty_version' => 'v1.6.0',
+            'version' => '1.6.0.0',
+            'reference' => '4dd0f9436d3911611622a6ced8329a1710576f60',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/helpers',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'laravel/sail' => array(
             'pretty_version' => 'v1.23.0',
             'version' => '1.23.0.0',
@@ -1203,9 +1212,9 @@
             'dev_requirement' => false,
         ),
         'rappasoft/laravel-boilerplate' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'c8553e7e9d7bb8b55930c9b73f47ff45759ab767',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
